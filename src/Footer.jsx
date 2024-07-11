@@ -3,7 +3,7 @@ function Footer() {
 
     return(
         <footer>
-            <p>&copy; {new Date().getFullYear()} Iiro Pääkkönen</p>
+            <p className='copyright'>&copy; {new Date().getFullYear()} Iiro Pääkkönen</p>
         </footer>
     );
 }
