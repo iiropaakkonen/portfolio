@@ -1,6 +1,12 @@
 import './header.css'
+import React from 'react';
 
-function Header() {
+function Header({ onButtonClick }) {
+
+    //händlää napin painalluksen ja lähettää App.jsx
+    const handleClick = (message) => {
+        onButtonClick(message);
+    };
 
     return(
         <div>
@@ -11,9 +17,15 @@ function Header() {
                         <li><p>MSc Software Engineering Student</p></li>
                     </div>
                     <div className="right-side">
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#academics">Academics</a></li>
-                        <li><a href="#personal">Personal</a></li>
+                        <li>
+                            <button onClick={() => handleClick("Body")}>Resume</button>
+                        </li>
+                        <li>
+                            <button onClick={() => handleClick("academics")}>Academics</button>
+                        </li>
+                        <li>
+                            <button onClick={() => handleClick("personal")}>Personal</button>
+                        </li>
                     </div>
                 </ul>
             </nav>
