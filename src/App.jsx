@@ -22,10 +22,21 @@ function App() {
     var renderedContainer = props.renderedContainer;
 
     //toimii atm stringeillä mutta parempi ehkä id tms.
-    if(renderedContainer == "Body") {
-      return <Body/>;
-    } else {
-      return null;
+    //if(renderedContainer == "home") {
+    //  return <Body/>;
+    //} else {
+    //  return null;
+    //}
+
+    switch (renderedContainer) {
+      case 1: //tähän home
+        return <Body/>;
+      case 2:
+        return null; //tähän resume
+      case 3:
+        return null; //tähän academics
+      case 4:
+        return null; //tähän personal
     }
   }
 
