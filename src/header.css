@@ -63,5 +63,19 @@ ul {
     border: none;
     margin-left: -2.5vw;
     margin-top: 2vh;
-    margin-right: 0;
+    margin-right: -1em;
+    font-family: Garamond, serif;
+}
+.name-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.resume-button, .academics-button, .personal-button {
+    border: none;
+    color: hsl(0, 0%, 50%);
+    background: none;
+}
+.resume-button:hover,  .academics-button:hover, .personal-button:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

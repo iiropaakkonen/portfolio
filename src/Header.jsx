@@ -18,13 +18,13 @@ function Header({ onButtonClick }) {
                     </div>
                     <div className="right-side">
                         <li>
-                            <button onClick={() => handleClick(2)}>Resume</button>
+                            <button className='resume-button' onClick={() => handleClick(2)}>Resume</button>
                         </li>
                         <li>
-                            <button onClick={() => handleClick(3)}>Academics</button>
+                            <button className='academics-button' onClick={() => handleClick(3)}>Academics</button>
                         </li>
                         <li>
-                            <button onClick={() => handleClick(4)}>Personal</button>
+                            <button className='personal-button' onClick={() => handleClick(4)}>Personal</button>
                         </li>
                     </div>
                 </ul>

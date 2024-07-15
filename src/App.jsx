@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from "./Header.jsx"
 import Body from "./Body.jsx"
 import Footer from "./Footer.jsx";
+import Resume from "./Resume.jsx";
 
 // MUISTA AINA LISÄTÄ EXPORT DEFAULT *FUNKTIO*, TAI SIVU KUSEE
 
@@ -32,11 +33,13 @@ function App() {
       case 1: //tähän home
         return <Body/>;
       case 2:
-        return null; //tähän resume
+        return <Resume/>; //tähän resume
       case 3:
         return null; //tähän academics
       case 4:
         return null; //tähän personal
+      default:
+        return <Body/>;
     }
   }
 
