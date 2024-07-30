@@ -3,6 +3,7 @@ import Header from "./Header.jsx"
 import Body from "./Body.jsx"
 import Footer from "./Footer.jsx";
 import Resume from "./Resume.jsx";
+import Personal from './Personal.jsx';
 
 // MUISTA AINA LISÄTÄ EXPORT DEFAULT *FUNKTIO*, TAI SIVU KUSEE
 
@@ -37,7 +38,7 @@ function App() {
       case 3:
         return null; //tähän academics
       case 4:
-        return null; //tähän personal
+        return <Personal/>; //tähän personal
       default:
         return <Body/>;
     }

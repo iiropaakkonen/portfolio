@@ -3,7 +3,7 @@ import iroh from "./assets/iroh.png"
 
 function Body() {
 
-    const paragraph = "I am a Bachelor of Science studying my Master's degree in Information Technology and Software Engineering at the University of Turku. My main interests are software development, web design and programming practices. On my spare time I go cycling, running and swimming. Video games also have a place in my heart.";
+    const paragraph = "I am a Bachelor of Science studying my Master's degree in Information Technology and Software Engineering at the University of Turku. My main interests are software development, web design and programming practices. In my spare time I go cycling, running and swimming. Video games also have a place in my heart.";
 
     return(
         <>
