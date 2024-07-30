@@ -4,19 +4,18 @@ import iroh from "./assets/iroh.png"
 function Personal () {
 
     const [backendData, setBackendData] = useState([{}]);
-    const [error, setError] = useState([{}]);
 
+
+    //this useEffect fetches data from the server localhost:5000/api
     useEffect(() => {
-        fetch('/api')
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
+        fetch('/api').then(
+            response => response.json()
+        ).then(
+            data => {
+                setBackendData(data)
             }
-            return response.json();
-          })
-          .then(data => setData(data))
-          .catch(error => setError(error.message));
-      }, []);
+        )
+    }, []);
 
     const paragraphs = [
         {
@@ -27,6 +26,11 @@ function Personal () {
         },
         {
             text: "this is the third paragraph", id: 2
+        },
+        {
+            //this part displays data from the server
+            //NEEDS TO BE MAPPED
+            text: backendData.text, id:3
         },
     ];
     return(
