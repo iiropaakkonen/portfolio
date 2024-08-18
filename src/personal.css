@@ -1,0 +1,27 @@
+.personalH2 {
+    font-family: Garamond, serif;
+    font-size: 1.5vw;
+    margin-left: 45%;
+    max-width: 10%;
+    text-align: center;
+}
+
+.personalPara {
+    font-size: 102%;
+    max-width: 35%;
+    max-height: 20%;
+    border-color: slategrey;
+    border-style: solid;
+    padding: 1%;
+}
+.separator-personal {
+    max-height: 60vh;
+    margin-bottom: -15%;
+    margin-top: 5vh;
+    margin-left: 1vw;
+}
+.paraDiv {
+    max-width: 35%;
+    max-height: 20%;
+    margin-bottom: 5vh;
+}

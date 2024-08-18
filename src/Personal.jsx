@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './personal.css'
 import iroh from "./assets/iroh.png"
 
 function Personal () {
@@ -8,7 +9,7 @@ function Personal () {
 
     //this useEffect fetches data from the server localhost:5000/api
     useEffect(() => {
-        fetch('/api').then(
+        fetch('/getData').then(
             response => response.json()
         ).then(
             data => {
@@ -17,33 +18,18 @@ function Personal () {
         )
     }, []);
 
-    const paragraphs = [
-        {
-            text: "this is the first paragraph", pic: iroh, id: 0
-        },
-        {
-            text: "this is the second paragraph", pic: null, id: 1
-        },
-        {
-            text: "this is the third paragraph", id: 2
-        },
-        {
-            //this part displays data from the server
-            //NEEDS TO BE MAPPED
-            text: backendData.text, id:3
-        },
-    ];
     return(
         <>
-        <h2>Here is some personal stuff of mine</h2>
-        {paragraphs.map(function(paragraph) {
+        <h2 className='personalH2'>Personal things about me</h2>
+        <div className='separator-personal'>
+        {backendData.map(function(data) {
             return (
-                <div key={paragraph.id}>
-                    <p>{paragraph.text}</p>
-                    <img src={paragraph.pic}></img>
+                <div className='paraDiv' key={data.id}>
+                    <p className='personalPara'>{data.text}</p>
                 </div>
             )
         })}
+        </div>
         </>
     );
 };
